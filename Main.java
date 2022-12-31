@@ -26,7 +26,11 @@ public class Main {
 		}
 		System.out.println(sequential_data.get(0).get(1));
 		
-		
+		TrackData trackData = (TrackData) readSequential();
+		HeuristicMethod heuristicMethod = new HeuristicMethod(trackData);
+		heuristicMethod.algorithm();
+		heuristicMethod.solve(0,trackData.totalNumberOfTracks );
+		heuristicMethod.printTracks(0,trackData.totalNumberOfTracks);
 
         }
         public static List<List<String>> readValues() throws IOException { 
